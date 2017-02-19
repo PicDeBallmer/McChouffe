@@ -121,8 +121,8 @@ dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('check', check, pass_args=True))
 
 jobs = updater.job_queue
-job_ctrlv = Job(ctrlv, 60 * 60 * 12) # douze heures de délai au démarrage pour éviter le pollupostage en cas de redémarrage
-jobs.put(job_ctrlv)
+job_mc_chouffe = Job(mc_chouffe, 60 * 60 * 12) # 12 hoursdealy when laucnhed
+jobs.put(job_mc_chouffe)
 
 updater.start_polling()
 updater.idle()
