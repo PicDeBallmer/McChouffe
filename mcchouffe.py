@@ -60,7 +60,7 @@ def sample_query(message: str) -> str:
     r = response.json()
     meta = r.get('meta') or {}
     if meta.get('code') == 200:
-        print(meta.['code'])
+        print(meta['code'])
         print(r)
 
     else:
@@ -120,9 +120,9 @@ dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(CommandHandler('check', check, pass_args=True))
 
-jobs = updater.job_queue
-job_mc_chouffe = Job(mc_chouffe, 60 * 60 * 12) # 12 hoursdealy when laucnhed
-jobs.put(job_mc_chouffe)
+#jobs = updater.job_queue
+#job_mc_chouffe = Job(mc_chouffe, 60 * 60 * 12) # 12 hoursdealy when laucnhed
+#jobs.put(job_mc_chouffe)
 
 updater.start_polling()
 updater.idle()
